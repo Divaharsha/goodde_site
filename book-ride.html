@@ -92,7 +92,9 @@
           <div class="container">
             <div class="left-block">
               <a href="#"><i class="fa fa-user-circle"></i> Customer Sign In</a>
-              <a href="#"><i class="fa fa-envelope"></i> needhelp@conexi.com</a>
+              <a href="#"
+                ><i class="fa fa-envelope"></i> gooddehelp@gmail.com</a
+              >
             </div>
             <!-- /.left-block -->
             <div class="logo-block">
@@ -205,26 +207,36 @@
               <div class="block-title">
                 <div class="dot-line"></div>
                 <!-- /.dot-line -->
-                <p>Looking for a taxi</p>
+                <p>Looking for a Tourism or Transportation</p>
                 <h2>Make your booking</h2>
               </div>
               <!-- /.block-title -->
               <form
-                action="http://ashik.templatepath.net/conexi-preview-files/inc/sendemail.php"
                 class="booking-form-two"
+                action="booking.php"
+                method="post"
+                enctype="multipart/form-data"
               >
                 <p>
-                  There are many variations of passages of lorem ipsum available
-                  but the majority have suffered alteration in some form by
-                  injected humor or random word which don't look even slightly
-                  believ- <br />able you are going to use a passage.
+                  When it comes to loading transportation and tourist bookings,
+                  our company provides the best of both worlds. Our services
+                  cater to businesses by offering reliable and efficient loading
+                  transportation options, ensuring that your cargo arrives at
+                  its destination on time. At the same time, we also offer
+                  top-notch tourist booking services with a wide range of
+                  destinations to choose from
                 </p>
                 <h3 class="form-block-title">Select Information</h3>
                 <!-- /.form-block-title -->
                 <div class="row">
                   <div class="col-lg-6">
                     <div class="input-holder">
-                      <input type="text" name="name" placeholder="Your name" />
+                      <input
+                        type="text"
+                        name="name"
+                        placeholder="Your name"
+                        required
+                      />
                     </div>
                     <!-- /.input-holder -->
                   </div>
@@ -233,8 +245,9 @@
                     <div class="input-holder">
                       <input
                         type="text"
-                        name="name"
+                        name="email"
                         placeholder="Email address"
+                        required
                       />
                     </div>
                     <!-- /.input-holder -->
@@ -242,17 +255,11 @@
                   <!-- /.col-lg-6 -->
                   <div class="col-lg-6">
                     <div class="input-holder">
-                      <input type="text" name="name" placeholder="Phone" />
-                    </div>
-                    <!-- /.input-holder -->
-                  </div>
-                  <!-- /.col-lg-6 -->
-                  <div class="col-lg-6">
-                    <div class="input-holder">
                       <input
-                        type="text"
-                        name="name"
-                        placeholder="Passengers #"
+                        type="number"
+                        name="mobile"
+                        placeholder="Phone"
+                        required
                       />
                     </div>
                     <!-- /.input-holder -->
@@ -262,8 +269,21 @@
                     <div class="input-holder">
                       <input
                         type="text"
-                        name="name"
+                        name="passengers"
+                        placeholder="Passengers"
+                        required
+                      />
+                    </div>
+                    <!-- /.input-holder -->
+                  </div>
+                  <!-- /.col-lg-6 -->
+                  <div class="col-lg-6">
+                    <div class="input-holder">
+                      <input
+                        type="text"
+                        name="pick_address"
                         placeholder="Pick up address"
+                        required
                       />
                     </div>
                     <!-- /.input-holder -->
@@ -273,8 +293,9 @@
                     <div class="input-holder">
                       <input
                         type="text"
-                        name="name"
+                        name="drop_address"
                         placeholder="Drop off address"
+                        required
                       />
                     </div>
                     <!-- /.input-holder -->
@@ -284,8 +305,9 @@
                     <div class="input-holder">
                       <input
                         type="date"
-                        name="name"
+                        name="date"
                         placeholder="Select date"
+                        required
                       />
                       <i class="conexi-icon-small-calendar"></i>
                     </div>
@@ -294,13 +316,19 @@
                   <!-- /.col-lg-6 -->
                   <div class="col-lg-6">
                     <div class="input-holder">
-                      <select class="selectpicker">
+                      <input
+                        type="time"
+                        name="time"
+                        placeholder="Select Time"
+                        required
+                      />
+                      <!-- <select class="selectpicker">
                         <option>Select Time</option>
                         <option>10AM-10.59AM</option>
                         <option>12PM-12.59PM</option>
                         <option>1PM-1.59PM</option>
                         <option>2PM-2.59PM</option>
-                      </select>
+                      </select> -->
                       <i class="conexi-icon-clock"></i>
                     </div>
                     <!-- /.input-holder -->
@@ -308,8 +336,7 @@
                   <!-- /.col-lg-6 -->
                 </div>
                 <!-- /.row -->
-                <h3 class="form-block-title">Select Car Type</h3>
-                <!-- /.form-block-title -->
+                <!-- <h3 class="form-block-title">Select Car Type</h3>
                 <div class="row">
                   <div class="col-lg-6">
                     <ul class="radio-fields clearfix">
@@ -340,19 +367,20 @@
                       </li>
                     </ul>
                   </div>
-                  <!-- /.col-lg-6 -->
-                </div>
+                </div> -->
                 <!-- /.row -->
-                <h3 class="form-block-title">Other Information</h3>
+                <!-- <h3 class="form-block-title">Other Information</h3> -->
                 <!-- /.form-block-title -->
                 <div class="row">
                   <div class="col-lg-6">
                     <div class="input-holder">
-                      <select class="selectpicker">
-                        <option>Car model</option>
-                        <option>Yaris 2014</option>
-                        <option>E Class 2010</option>
-                        <option>M5 2008</option>
+                      <select class="selectpicker" name="category" required>
+                        <option value="">Select Category</option>
+                        <option value="Agriculture">Agriculture</option>
+                        <option value="Construction">Construction</option>
+                        <option value="Home Appliances">Home Appliances</option>
+                        <option value="Tourist">Tourist</option>
+                        <option value="Others">Others</option>
                       </select>
                       <i class="fa fa-angle-down select-icon"></i>
                     </div>
@@ -361,32 +389,23 @@
                   <!-- /.col-lg-6 -->
                   <div class="col-lg-6">
                     <div class="input-holder">
-                      <select class="selectpicker">
-                        <option>Driver age</option>
-                        <option>21</option>
-                        <option>36</option>
-                        <option>42</option>
-                        <option>48</option>
+                      <select class="selectpicker" name="vehicle_type" required>
+                        <option value="">Prefer Vehicle</option>
+                        <option value="Auto">Auto</option>
+                        <option value="Tourist Bus">Tourist Bus</option>
+                        <option value="Mini Truck">Mini Truck</option>
+                        <option value="Eicher">Eicher</option>
+                        <option value="Tempo">Tempo</option>
+                        <option value="Lorry">Lorry</option>
                       </select>
-                      <i class="fa fa-angle-down select-icon"></i>
-                    </div>
-                    <!-- /.input-holder -->
-                  </div>
-                  <!-- /.col-lg-6 -->
-                  <div class="col-lg-6">
-                    <div class="input-holder">
-                      <input
-                        type="text"
-                        name="type of driver"
-                        placeholder="Professional driver"
-                      />
+                      <i class="conexi-icon-taxi"></i>
                     </div>
                     <!-- /.input-holder -->
                   </div>
                   <!-- /.col-lg-6 -->
                 </div>
                 <!-- /.row -->
-                <ul class="special-checkbox">
+                <!-- <ul class="special-checkbox">
                   <li>
                     <span class="input-checker">
                       <input
@@ -396,8 +415,11 @@
                       /> </span
                     >By using this form you agree to our terms & conditions.
                   </li>
-                </ul>
-                <button type="submit" class="book-btn">Book Now</button>
+                </ul> -->
+
+                <button type="submit" class="book-btn" name="btnAdd">
+                  Book Now
+                </button>
               </form>
               <!-- /.booking-form-two -->
             </div>
@@ -424,9 +446,10 @@
                   </div>
                   <!-- /.widget-title -->
                   <p>
-                    There are many vari of pass of lorem ipsum availab but the
-                    majority have suffered in some form by injected humour or
-                    words
+                    <b> GoodDe</b> is a transport and tourist booking company
+                    that provides reliable, efficient and safe services to its
+                    customers. Our mission is to revolutionize the transport and
+                    tourist industry by offering the best services possible
                   </p>
                   <div class="social-block">
                     <a href="#"><i class="fa fa-twitter"></i></a>
@@ -446,11 +469,12 @@
                   </div>
                   <!-- /.widget-title -->
                   <ul class="link-lists">
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Get a Taxi</a></li>
-                    <li><a href="#">Our Reviews</a></li>
-                    <li><a href="#">Latest News</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="book-ride.html">Book</a></li>
+                    <!-- <li><a href="#">Our Reviews</a></li>
+                    <li><a href="#">Latest News</a></li> -->
+                    <li><a href="contact.html">Contact</a></li>
                   </ul>
                 </div>
                 <!-- /.footer-widget -->
@@ -463,11 +487,11 @@
                   </div>
                   <!-- /.widget-title -->
                   <p>
-                    86 Road Broklyn Street, 600 <br />
-                    New York, USA
+                    Cantonment,Trichirappalli<br />
+                    Tamilnadu, India
                   </p>
                   <ul class="contact-infos">
-                    <li><i class="fa fa-envelope"></i> needhelp@conexi.com</li>
+                    <li><i class="fa fa-envelope"></i> gooddehelp@gmail.com</li>
                     <li><i class="fa fa-phone-square"></i> 666 888 000</li>
                   </ul>
                   <!-- /.contact-infos -->
@@ -484,7 +508,7 @@
                   <p>
                     Sign up now for our mailing list to get all latest news
                     <br />
-                    and updates from conexi company.
+                    and updates from GoodDe company.
                   </p>
                   <form action="#" class="subscribe-form">
                     <input
@@ -511,7 +535,7 @@
                 <a href="index.html" class="footer-logo"
                   ><img src="images/resources/logo-1-1.png" alt="Awesome Image"
                 /></a>
-                <span>&copy; 2020 <a href="#">Tonatheme.com</a></span>
+                <!-- <span>&copy; 2020 <a href="#">Tonatheme.com</a></span> -->
               </div>
               <!-- /.left-block -->
               <div class="right-block">

@@ -432,7 +432,7 @@ hr.style-one {
 #booking {
   font-size: 18px !important;
   letter-spacing: 0.1em;
-  text-shadow: 0px 2px white;
+  color: white;
 }
 .header-navigation ul.navigation-box > li > a:before {
   content: "";
@@ -1456,7 +1456,7 @@ hr.style-one {
   line-height: 1em;
 }
 .cta-style-one h3 {
-  font-size: 60px;
+  font-size: 50px;
   font-weight: 700;
   letter-spacing: -0.04em;
   margin-top: 15px;
@@ -2584,6 +2584,17 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   display: none;
   -webkit-appearance: none;
 }
+input[type="file"]::-webkit-file-upload-button {
+  visibility: hidden;
+}
+input[type="file"] {
+  cursor: pointer;
+}
+
+.book-ride-one h2 {
+  color: #fff !important;
+}
+
 /*
 * 10. about styles
 */

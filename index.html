@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Home || GoodDe</title>
+    <title>Home | GoodDe</title>
     <link
       rel="apple-touch-icon"
       sizes="57x57"
@@ -92,7 +92,9 @@
           <div class="container">
             <div class="left-block">
               <a href="#"><i class="fa fa-user-circle"></i> Customer Sign In</a>
-              <a href="#"><i class="fa fa-envelope"></i> needhelp@conexi.com</a>
+              <a href="#"
+                ><i class="fa fa-envelope"></i> gooddehelp@gmail.com</a
+              >
             </div>
             <!-- /.left-block -->
             <div class="logo-block">
@@ -278,7 +280,7 @@
                 </div>
                 <!-- /.block-title -->
                 <p>
-                  Our taxis commit to make your trips unique <br />
+                  Our Drivers commit to make your trips unique <br />
                   by best answering your needs.
                 </p>
               </div>
@@ -286,11 +288,22 @@
             </div>
             <!-- /.col-lg-4 -->
             <div class="col-lg-8">
-              <form action="#" class="booking-form-one">
+              <form
+                action="booking.php"
+                name="add_admin_form"
+                method="post"
+                enctype="multipart/form-data"
+                class="booking-form-one"
+              >
                 <div class="row">
                   <div class="col-lg-6">
                     <div class="input-holder">
-                      <input type="text" name="name" placeholder="Your name" />
+                      <input
+                        type="text"
+                        name="name"
+                        placeholder="Your name"
+                        required
+                      />
                     </div>
                     <!-- /.input-holder -->
                   </div>
@@ -299,8 +312,9 @@
                     <div class="input-holder">
                       <input
                         type="text"
-                        name="name"
+                        name="email"
                         placeholder="Email address"
+                        required
                       />
                     </div>
                     <!-- /.input-holder -->
@@ -312,6 +326,7 @@
                         type="number"
                         name="mobile"
                         placeholder="Mobile Number"
+                        required
                       />
                     </div>
                     <!-- /.input-holder -->
@@ -320,8 +335,9 @@
                     <div class="input-holder">
                       <input
                         type="text"
-                        name="name"
-                        placeholder="Passengers #"
+                        name="passengers"
+                        placeholder="Passengers"
+                        required
                       />
                     </div>
                     <!-- /.input-holder -->
@@ -329,11 +345,13 @@
                   <!-- /.col-lg-6 -->
                   <div class="col-lg-6">
                     <div class="input-holder">
-                      <select class="selectpicker">
-                        <option>Select Category</option>
-                        <option>Agriculture</option>
-                        <option>Construction</option>
-                        <option>Tourist</option>
+                      <select class="selectpicker" name="category" required>
+                        <option value="">Select Category</option>
+                        <option value="Agriculture">Agriculture</option>
+                        <option value="Construction">Construction</option>
+                        <option value="Home Appliances">Home Appliances</option>
+                        <option value="Tourist">Tourist</option>
+                        <option value="Others">Others</option>
                       </select>
                       <i class="conexi-icon-car"></i>
                     </div>
@@ -341,12 +359,14 @@
                   </div>
                   <div class="col-lg-6">
                     <div class="input-holder">
-                      <select class="selectpicker">
-                        <option>Prefer Vehicle</option>
-                        <option>Auto</option>
-                        <option>Bus</option>
-                        <option>Lorry</option>
-                        <option>Tempo</option>
+                      <select class="selectpicker" name="vehicle_type" required>
+                        <option value="">Prefer Vehicle</option>
+                        <option value="Auto">Auto</option>
+                        <option value="Tourist Bus">Tourist Bus</option>
+                        <option value="Eicher">Eicher</option>
+                        <option value="Mini Truck">Mini Truck</option>
+                        <option value="Tempo">Tempo</option>
+                        <option value="Lorry">Lorry</option>
                       </select>
                       <i class="conexi-icon-taxi"></i>
                     </div>
@@ -356,8 +376,9 @@
                     <div class="input-holder">
                       <input
                         type="text"
-                        name="name"
+                        name="pick_address"
                         placeholder="Pick up address"
+                        required
                       />
                     </div>
                     <!-- /.input-holder -->
@@ -367,8 +388,9 @@
                     <div class="input-holder">
                       <input
                         type="text"
-                        name="name"
+                        name="drop_address"
                         placeholder="Drop off address"
+                        required
                       />
                     </div>
                     <!-- /.input-holder -->
@@ -378,8 +400,9 @@
                     <div class="input-holder">
                       <input
                         type="date"
-                        name="name"
+                        name="date"
                         placeholder="Select date"
+                        required
                       />
                       <i class="conexi-icon-small-calendar"></i>
                     </div>
@@ -390,8 +413,9 @@
                     <div class="input-holder">
                       <input
                         type="time"
-                        name="name"
+                        name="time"
                         placeholder="Select date"
+                        required
                       />
                       <!-- <select class="selectpicker">
                         <option>Select Time</option>
@@ -407,7 +431,7 @@
                   <!-- /.col-lg-6 -->
                   <div class="col-lg-6">
                     <div class="input-holder">
-                      <button type="submit">Book Now</button>
+                      <button type="submit" name="btnAdd">Book Now</button>
                     </div>
                     <!-- /.input-holder -->
                   </div>
@@ -444,11 +468,14 @@
                   alt="Awesome Image"
                 />
                 <p>
-                  There are many variations of passages of lorem ipsum available
-                  but the majority have suffered alteration in some form by
-                  injected humour or random words which don't look even slightly
-                  believable. If you are going to use a passage of lorem ipsum
-                  you need to be sure there isn't anything embarrassing.
+                  GoodDe is a transport and tourist booking company that
+                  provides reliable, efficient and safe services to its
+                  customers. Our mission is to revolutionize the transport and
+                  tourist industry by offering the best services possible. With
+                  a team of experienced and knowledgeable drivers and a
+                  cutting-edge technology platform, we are committed to
+                  providing our customers with a seamless and enjoyable
+                  experience.
                 </p>
               </div>
               <!-- /.image-block -->
@@ -464,12 +491,11 @@
                         alt="Awesome Image"
                       />
                       <a
-                        href="https://www.youtube.com/watch?v=hsb-fA6ApiE"
+                        href="https://youtube.com/shorts/4-axgHze4vg?feature=share"
                         class="video-popup"
                         ><i class="fa fa-play"></i
                       ></a>
                     </div>
-                    <!-- /.inner-block -->
                   </div>
                   <!-- /.image-block -->
                   <div class="content-block">
@@ -481,11 +507,14 @@
                 </div>
                 <!-- /.video-block-one -->
                 <p>
-                  There are many variations of passages of lorem ipsum available
-                  but the majority have suffered alteration in some form by
-                  injected humour or random words which don't look even slightly
-                  believable. If you are going to use a passage of lorem ipsum
-                  you need to be sure there isn't anything embarrassing.
+                  GoodDe is a transport and tourist booking company that
+                  provides reliable, efficient and safe services to its
+                  customers. Our mission is to revolutionize the transport and
+                  tourist industry by offering the best services possible. With
+                  a team of experienced and knowledgeable drivers and a
+                  cutting-edge technology platform, we are committed to
+                  providing our customers with a seamless and enjoyable
+                  experience.
                 </p>
                 <hr class="style-one" />
                 <div class="call-block">
@@ -530,9 +559,9 @@
           <div class="row">
             <div class="col-lg-3 col-md-6 col-sm-12">
               <div class="single-funfact-one hvr-float-shadow">
-                <i class="fa fa-user"></i>
+                <i class="fa fa-book"></i>
                 <h3 class="counter">8700</h3>
-                <p>KM Driven</p>
+                <p>Total Bookings</p>
               </div>
               <!-- /.single-funfact-one -->
             </div>
@@ -541,9 +570,16 @@
               <div class="single-funfact-one hvr-float-shadow">
                 <i class="conexi-icon-team"></i>
                 <h3 class="counter">4978</h3>
-                <p>People Dropped</p>
+                <p>Happy Customers</p>
               </div>
               <!-- /.single-funfact-one -->
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12">
+              <div class="single-funfact-one hvr-float-shadow">
+                <i class="fa fa-truck"></i>
+                <h3 class="counter">2480</h3>
+                <p>Transport Bookings</p>
+              </div>
             </div>
             <!-- /.col-lg-3 -->
             <div class="col-lg-3 col-md-6 col-sm-12">
@@ -555,14 +591,13 @@
               <!-- /.single-funfact-one -->
             </div>
             <!-- /.col-lg-3 -->
-            <div class="col-lg-3 col-md-6 col-sm-12">
+            <!-- <div class="col-lg-3 col-md-6 col-sm-12">
               <div class="single-funfact-one hvr-float-shadow">
                 <i class="conexi-icon-happy"></i>
                 <h3 class="counter">2480</h3>
                 <p>Happy People</p>
               </div>
-              <!-- /.single-funfact-one -->
-            </div>
+            </div> -->
             <!-- /.col-lg-3 -->
           </div>
           <!-- /.row -->
@@ -578,7 +613,7 @@
           </div>
           <!-- /.content-block -->
           <div class="button-block">
-            <a href="book-ride.html" class="cta-btn">Book Taxi Now</a>
+            <a href="book-ride.html" class="cta-btn">Book Ride Now</a>
           </div>
           <!-- /.button-block -->
         </div>
@@ -590,8 +625,8 @@
           <div class="block-title text-center">
             <div class="dot-line"></div>
             <!-- /.dot-line -->
-            <p>Our best cars</p>
-            <h2>Choose taxi</h2>
+            <p>Our best Vehicles</p>
+            <h2>Choose Vehicle</h2>
           </div>
           <!-- /.block-title -->
           <ul class="nav nav-tabs tab-title" role="tablist">
@@ -601,22 +636,22 @@
                 href="#hybrid"
                 role="tab"
                 data-toggle="tab"
-                >hybrid taxi</a
+                >Tourists</a
               >
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#town" role="tab" data-toggle="tab"
-                >town taxi</a
+                >Home Appliance Transport</a
               >
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#limousine" role="tab" data-toggle="tab"
-                >LIMOUSINE taxi</a
+                >Construction</a
               >
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#suv" role="tab" data-toggle="tab"
-                >suv taxi</a
+                >Cabs</a
               >
             </li>
           </ul>
@@ -627,7 +662,7 @@
               id="hybrid"
             >
               <div class="row">
-                <div class="col-lg-4">
+                <div class="col-lg-4 col-md-6 col-sm-12">
                   <div class="single-taxi-one">
                     <div class="inner-content">
                       <img
@@ -638,24 +673,24 @@
                         <i class="conexi-icon-bmw"></i>
                       </div>
                       <!-- /.icon-block -->
-                      <h3>M5 2008 Model</h3>
+                      <h3>Sleeper With A/C</h3>
                       <ul class="feature-list">
                         <li>
-                          <span class="name-line">Base Rate:</span>
-                          <span class="price-line">$4.30</span>
+                          <span class="name-line">Base Rate/50kms:</span>
+                          <span class="price-line">₹3600</span>
                         </li>
                         <li>
-                          <span class="name-line">Per Mile/KM:</span>
-                          <span class="price-line">$2.00</span>
+                          <span class="name-line">Per Mile/Km:</span>
+                          <span class="price-line">₹23 -₹25.00</span>
                         </li>
                         <li>
-                          <span class="name-line">Passengers:</span>
-                          <span class="price-line">4</span>
+                          <span class="name-line">Driver/Day:</span>
+                          <span class="price-line">₹500 -₹800</span>
                         </li>
                       </ul>
                       <!-- /.feature-list -->
-                      <a href="single-taxi.html" class="book-taxi-btn"
-                        >Book Taxi</a
+                      <a href="book-ride.html" class="book-taxi-btn"
+                        >Book Now</a
                       >
                     </div>
                     <!-- /.inner-content -->
@@ -663,7 +698,7 @@
                   <!-- /.single-taxi-one -->
                 </div>
                 <!-- /.col-lg-4 -->
-                <div class="col-lg-4">
+                <div class="col-lg-4 col-md-6 col-sm-12">
                   <div class="single-taxi-one">
                     <div class="inner-content">
                       <img
@@ -674,24 +709,24 @@
                         <i class="conexi-icon-mercedes-benz"></i>
                       </div>
                       <!-- /.icon-block -->
-                      <h3>E Class 2010 Model</h3>
+                      <h3>Sleeper Bus</h3>
                       <ul class="feature-list">
                         <li>
-                          <span class="name-line">Base Rate:</span>
-                          <span class="price-line">$4.30</span>
+                          <span class="name-line">Base Rate/50kms:</span>
+                          <span class="price-line">₹1500</span>
                         </li>
                         <li>
-                          <span class="name-line">Per Mile/KM:</span>
-                          <span class="price-line">$2.00</span>
+                          <span class="name-line">Per Mile/Km:</span>
+                          <span class="price-line">₹23-24.30</span>
                         </li>
                         <li>
-                          <span class="name-line">Passengers:</span>
-                          <span class="price-line">4</span>
+                          <span class="name-line">Driver/Day:</span>
+                          <span class="price-line">₹500-700</span>
                         </li>
                       </ul>
                       <!-- /.feature-list -->
-                      <a href="single-taxi.html" class="book-taxi-btn"
-                        >Book Taxi</a
+                      <a href="book-ride.html" class="book-taxi-btn"
+                        >Book Now</a
                       >
                     </div>
                     <!-- /.inner-content -->
@@ -699,7 +734,7 @@
                   <!-- /.single-taxi-one -->
                 </div>
                 <!-- /.col-lg-4 -->
-                <div class="col-lg-4">
+                <div class="col-lg-4 col-md-6 col-sm-12">
                   <div class="single-taxi-one">
                     <div class="inner-content">
                       <img
@@ -710,24 +745,132 @@
                         <i class="conexi-icon-toyota"></i>
                       </div>
                       <!-- /.icon-block -->
-                      <h3>Yaris 2014 Model</h3>
+                      <h3>Mini Van</h3>
                       <ul class="feature-list">
                         <li>
-                          <span class="name-line">Base Rate:</span>
-                          <span class="price-line">$4.30</span>
+                          <span class="name-line">Base Rate/40kms:</span>
+                          <span class="price-line">₹1300</span>
                         </li>
                         <li>
-                          <span class="name-line">Per Mile/KM:</span>
-                          <span class="price-line">$2.00</span>
+                          <span class="name-line">Per Mile/Km:</span>
+                          <span class="price-line">₹21-22.00</span>
                         </li>
                         <li>
-                          <span class="name-line">Passengers:</span>
-                          <span class="price-line">4</span>
+                          <span class="name-line">Driver/Day:</span>
+                          <span class="price-line">₹400-600</span>
                         </li>
                       </ul>
                       <!-- /.feature-list -->
-                      <a href="single-taxi.html" class="book-taxi-btn"
-                        >Book Taxi</a
+                      <a href="book-ride.html" class="book-taxi-btn"
+                        >Book Now</a
+                      >
+                    </div>
+                    <!-- /.inner-content -->
+                  </div>
+                  <!-- /.single-taxi-one -->
+                </div>
+                <!-- /.col-lg-4 -->
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                  <div class="single-taxi-one">
+                    <div class="inner-content">
+                      <img
+                        src="images/pricing/pricing-1-4.png"
+                        alt="Awesome Image"
+                      />
+                      <div class="icon-block">
+                        <i class="conexi-icon-audi"></i>
+                      </div>
+                      <!-- /.icon-block -->
+                      <h3>Kia Sedona 2018</h3>
+                      <ul class="feature-list">
+                        <li>
+                          <span class="name-line">Base Rate/10kms:</span>
+                          <span class="price-line">₹450</span>
+                        </li>
+                        <li>
+                          <span class="name-line">Per Mile/Km:</span>
+                          <span class="price-line">₹20-₹25.00</span>
+                        </li>
+                        <li>
+                          <span class="name-line">Driver/Day:</span>
+                          <span class="price-line">₹500</span>
+                        </li>
+                      </ul>
+                      <!-- /.feature-list -->
+                      <a href="book-ride.html" class="book-taxi-btn"
+                        >Book Now</a
+                      >
+                    </div>
+                    <!-- /.inner-content -->
+                  </div>
+                  <!-- /.single-taxi-one -->
+                </div>
+                <!-- /.col-lg-4 -->
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                  <div class="single-taxi-one">
+                    <div class="inner-content">
+                      <img
+                        src="images/pricing/pricing-1-5.png"
+                        alt="Awesome Image"
+                      />
+                      <div class="icon-block">
+                        <i class="conexi-icon-chevrolet"></i>
+                      </div>
+                      <!-- /.icon-block -->
+                      <h3>Toyota Hiace</h3>
+                      <ul class="feature-list">
+                        <li>
+                          <span class="name-line">Base Rate/20kms:</span>
+                          <span class="price-line">₹2000</span>
+                        </li>
+                        <li>
+                          <span class="name-line">Per Mile/Km:</span>
+                          <span class="price-line">₹25-₹30.00</span>
+                        </li>
+                        <li>
+                          <span class="name-line">Driver/Day:</span>
+                          <span class="price-line">₹500-₹700</span>
+                        </li>
+                      </ul>
+                      <!-- /.feature-list -->
+                      <a href="book-ride.html" class="book-taxi-btn"
+                        >Book Now</a
+                      >
+                    </div>
+                    <!-- /.inner-content -->
+                  </div>
+                  <!-- /.single-taxi-one -->
+                </div>
+                <!-- /.col-lg-4 -->
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                  <div class="single-taxi-one">
+                    <div class="inner-content">
+                      <img
+                        src="images/pricing/pricing-1-6.png"
+                        alt="Awesome Image"
+                      />
+                      <div class="icon-block">
+                        <i class="conexi-icon-honda"></i>
+                      </div>
+                      <!-- /.icon-block -->
+                      <h3>Special For Students</h3>
+                      <ul class="feature-list">
+                        <li>
+                          <span class="name-line">Base Rate/50kms:</span>
+                          <span class="price-line">₹4000</span>
+                        </li>
+                        <li>
+                          <span class="name-line">Per Mile/KM:</span>
+                          <span class="price-line">₹20-24.00</span>
+                        </li>
+                        <li>
+                          <span class="name-line">Driver/Day:</span>
+                          <span class="price-line">₹600-₹900</span>
+                        </li>
+                      </ul>
+                      <!-- /.feature-list -->
+                      <a href="book-ride.html" class="book-taxi-btn"
+                        >Book Now</a
                       >
                     </div>
                     <!-- /.inner-content -->
@@ -740,35 +883,35 @@
             </div>
             <div role="tabpanel" class="tab-pane animated fadeInUp" id="town">
               <div class="row">
-                <div class="col-lg-4">
+                <div class="col-lg-4 col-md-6 col-sm-12">
                   <div class="single-taxi-one">
                     <div class="inner-content">
                       <img
-                        src="images/pricing/pricing-1-1.png"
+                        src="images/pricing/pricing-2-1.png"
                         alt="Awesome Image"
                       />
                       <div class="icon-block">
                         <i class="conexi-icon-bmw"></i>
                       </div>
                       <!-- /.icon-block -->
-                      <h3>M5 2008 Model</h3>
+                      <h3>Mini Truck</h3>
                       <ul class="feature-list">
                         <li>
-                          <span class="name-line">Base Rate:</span>
-                          <span class="price-line">$4.30</span>
+                          <span class="name-line">Base Rate/15kms:</span>
+                          <span class="price-line">₹500-800</span>
                         </li>
                         <li>
                           <span class="name-line">Per Mile/KM:</span>
-                          <span class="price-line">$2.00</span>
+                          <span class="price-line">₹35-₹45.00</span>
                         </li>
                         <li>
-                          <span class="name-line">Passengers:</span>
-                          <span class="price-line">4</span>
+                          <span class="name-line">Driver/Day:</span>
+                          <span class="price-line">₹250</span>
                         </li>
                       </ul>
                       <!-- /.feature-list -->
-                      <a href="single-taxi.html" class="book-taxi-btn"
-                        >Book Taxi</a
+                      <a href="book-ride.html" class="book-taxi-btn"
+                        >Book Now</a
                       >
                     </div>
                     <!-- /.inner-content -->
@@ -776,35 +919,35 @@
                   <!-- /.single-taxi-one -->
                 </div>
                 <!-- /.col-lg-4 -->
-                <div class="col-lg-4">
+                <div class="col-lg-4 col-md-6 col-sm-12">
                   <div class="single-taxi-one">
                     <div class="inner-content">
                       <img
-                        src="images/pricing/pricing-1-2.png"
+                        src="images/pricing/pricing-2-2.png"
                         alt="Awesome Image"
                       />
                       <div class="icon-block">
                         <i class="conexi-icon-mercedes-benz"></i>
                       </div>
                       <!-- /.icon-block -->
-                      <h3>E Class 2010 Model</h3>
+                      <h3>TATA Tempo</h3>
                       <ul class="feature-list">
                         <li>
-                          <span class="name-line">Base Rate:</span>
-                          <span class="price-line">$4.30</span>
+                          <span class="name-line">Base Rate/15kms:</span>
+                          <span class="price-line">₹750</span>
                         </li>
                         <li>
                           <span class="name-line">Per Mile/KM:</span>
-                          <span class="price-line">$2.00</span>
+                          <span class="price-line">₹40</span>
                         </li>
                         <li>
-                          <span class="name-line">Passengers:</span>
-                          <span class="price-line">4</span>
+                          <span class="name-line">Driver/Day:</span>
+                          <span class="price-line">₹400-₹650</span>
                         </li>
                       </ul>
                       <!-- /.feature-list -->
-                      <a href="single-taxi.html" class="book-taxi-btn"
-                        >Book Taxi</a
+                      <a href="book-ride.html" class="book-taxi-btn"
+                        >Book Now</a
                       >
                     </div>
                     <!-- /.inner-content -->
@@ -812,18 +955,53 @@
                   <!-- /.single-taxi-one -->
                 </div>
                 <!-- /.col-lg-4 -->
-                <div class="col-lg-4">
+                <div class="col-lg-4 col-md-6 col-sm-12">
                   <div class="single-taxi-one">
                     <div class="inner-content">
                       <img
-                        src="images/pricing/pricing-1-3.png"
+                        src="images/pricing/pricing-2-3.png"
                         alt="Awesome Image"
                       />
                       <div class="icon-block">
                         <i class="conexi-icon-toyota"></i>
                       </div>
                       <!-- /.icon-block -->
-                      <h3>Yaris 2014 Model</h3>
+                      <h3>Eicher</h3>
+                      <ul class="feature-list">
+                        <li>
+                          <span class="name-line">Base Rate/20kms:</span>
+                          <span class="price-line">₹700-₹1000</span>
+                        </li>
+                        <li>
+                          <span class="name-line">Per Mile/KM:</span>
+                          <span class="price-line">₹38-₹41.00</span>
+                        </li>
+                        <li>
+                          <span class="name-line">Driver:</span>
+                          <span class="price-line">₹700</span>
+                        </li>
+                      </ul>
+                      <!-- /.feature-list -->
+                      <a href="book-ride.html" class="book-taxi-btn"
+                        >Book Now</a
+                      >
+                    </div>
+                    <!-- /.inner-content -->
+                  </div>
+                  <!-- /.single-taxi-one -->
+                </div>
+                <!-- /.col-lg-4 -->
+                <!-- <div class="col-lg-4 col-md-6 col-sm-12">
+                  <div class="single-taxi-one">
+                    <div class="inner-content">
+                      <img
+                        src="images/pricing/pricing-1-4.png"
+                        alt="Awesome Image"
+                      />
+                      <div class="icon-block">
+                        <i class="conexi-icon-audi"></i>
+                      </div>
+                      <h3>S3 2016 Model</h3>
                       <ul class="feature-list">
                         <li>
                           <span class="name-line">Base Rate:</span>
@@ -838,16 +1016,74 @@
                           <span class="price-line">4</span>
                         </li>
                       </ul>
-                      <!-- /.feature-list -->
                       <a href="single-taxi.html" class="book-taxi-btn"
                         >Book Taxi</a
                       >
                     </div>
-                    <!-- /.inner-content -->
                   </div>
-                  <!-- /.single-taxi-one -->
                 </div>
-                <!-- /.col-lg-4 -->
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                  <div class="single-taxi-one">
+                    <div class="inner-content">
+                      <img
+                        src="images/pricing/pricing-1-5.png"
+                        alt="Awesome Image"
+                      />
+                      <div class="icon-block">
+                        <i class="conexi-icon-chevrolet"></i>
+                      </div>
+                      <h3>Bolt EV 2006 Model</h3>
+                      <ul class="feature-list">
+                        <li>
+                          <span class="name-line">Base Rate:</span>
+                          <span class="price-line">$4.30</span>
+                        </li>
+                        <li>
+                          <span class="name-line">Per Mile/KM:</span>
+                          <span class="price-line">$2.00</span>
+                        </li>
+                        <li>
+                          <span class="name-line">Passengers:</span>
+                          <span class="price-line">4</span>
+                        </li>
+                      </ul>
+                      <a href="single-taxi.html" class="book-taxi-btn"
+                        >Book Taxi</a
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                  <div class="single-taxi-one">
+                    <div class="inner-content">
+                      <img
+                        src="images/pricing/pricing-1-6.png"
+                        alt="Awesome Image"
+                      />
+                      <div class="icon-block">
+                        <i class="conexi-icon-honda"></i>
+                      </div>
+                      <h3>Civic 2014 Model</h3>
+                      <ul class="feature-list">
+                        <li>
+                          <span class="name-line">Base Rate:</span>
+                          <span class="price-line">$4.30</span>
+                        </li>
+                        <li>
+                          <span class="name-line">Per Mile/KM:</span>
+                          <span class="price-line">$2.00</span>
+                        </li>
+                        <li>
+                          <span class="name-line">Passengers:</span>
+                          <span class="price-line">4</span>
+                        </li>
+                      </ul>
+                      <a href="single-taxi.html" class="book-taxi-btn"
+                        >Book Taxi</a
+                      >
+                    </div>
+                  </div>
+                </div> -->
               </div>
               <!-- /.row -->
             </div>
@@ -857,35 +1093,35 @@
               id="limousine"
             >
               <div class="row">
-                <div class="col-lg-4">
+                <div class="col-lg-4 col-md-6 col-sm-12">
                   <div class="single-taxi-one">
                     <div class="inner-content">
                       <img
-                        src="images/pricing/pricing-1-1.png"
+                        src="images/pricing/pricing-3-1.png"
                         alt="Awesome Image"
                       />
                       <div class="icon-block">
                         <i class="conexi-icon-bmw"></i>
                       </div>
                       <!-- /.icon-block -->
-                      <h3>M5 2008 Model</h3>
+                      <h3>Truck Lorry</h3>
                       <ul class="feature-list">
                         <li>
-                          <span class="name-line">Base Rate:</span>
-                          <span class="price-line">$4.30</span>
+                          <span class="name-line">Base Rate/Ton:</span>
+                          <span class="price-line">₹3500</span>
                         </li>
                         <li>
-                          <span class="name-line">Per Mile/KM:</span>
-                          <span class="price-line">$2.00</span>
+                          <span class="name-line">Driver:</span>
+                          <span class="price-line">₹(Total/12%)</span>
                         </li>
                         <li>
-                          <span class="name-line">Passengers:</span>
-                          <span class="price-line">4</span>
+                          <span class="name-line">Extras:</span>
+                          <span class="price-line">Tolls,Fuel,Maintenance</span>
                         </li>
                       </ul>
                       <!-- /.feature-list -->
-                      <a href="single-taxi.html" class="book-taxi-btn"
-                        >Book Taxi</a
+                      <a href="book-ride.html" class="book-taxi-btn"
+                        >Book Now</a
                       >
                     </div>
                     <!-- /.inner-content -->
@@ -893,35 +1129,35 @@
                   <!-- /.single-taxi-one -->
                 </div>
                 <!-- /.col-lg-4 -->
-                <div class="col-lg-4">
+                <div class="col-lg-4 col-md-6 col-sm-12">
                   <div class="single-taxi-one">
                     <div class="inner-content">
                       <img
-                        src="images/pricing/pricing-1-2.png"
+                        src="images/pricing/pricing-3-2.png"
                         alt="Awesome Image"
                       />
                       <div class="icon-block">
                         <i class="conexi-icon-mercedes-benz"></i>
                       </div>
                       <!-- /.icon-block -->
-                      <h3>E Class 2010 Model</h3>
+                      <h3>Dumper Lorry</h3>
                       <ul class="feature-list">
                         <li>
-                          <span class="name-line">Base Rate:</span>
-                          <span class="price-line">$4.30</span>
+                          <span class="name-line">Base Rate/Ton:</span>
+                          <span class="price-line">₹3000</span>
                         </li>
                         <li>
-                          <span class="name-line">Per Mile/KM:</span>
-                          <span class="price-line">$2.00</span>
+                          <span class="name-line">Driver:</span>
+                          <span class="price-line">₹(Total/10%)</span>
                         </li>
                         <li>
-                          <span class="name-line">Passengers:</span>
-                          <span class="price-line">4</span>
+                          <span class="name-line">Extras:</span>
+                          <span class="price-line">Tolls,Maintenance,Fuel</span>
                         </li>
                       </ul>
                       <!-- /.feature-list -->
-                      <a href="single-taxi.html" class="book-taxi-btn"
-                        >Book Taxi</a
+                      <a href="book-ride.html" class="book-taxi-btn"
+                        >Book Now</a
                       >
                     </div>
                     <!-- /.inner-content -->
@@ -929,18 +1165,53 @@
                   <!-- /.single-taxi-one -->
                 </div>
                 <!-- /.col-lg-4 -->
-                <div class="col-lg-4">
+                <div class="col-lg-4 col-md-6 col-sm-12">
                   <div class="single-taxi-one">
                     <div class="inner-content">
                       <img
-                        src="images/pricing/pricing-1-3.png"
+                        src="images/pricing/pricing-3-3.png"
                         alt="Awesome Image"
                       />
                       <div class="icon-block">
                         <i class="conexi-icon-toyota"></i>
                       </div>
                       <!-- /.icon-block -->
-                      <h3>Yaris 2014 Model</h3>
+                      <h3>Ashok Leyland Lorry</h3>
+                      <ul class="feature-list">
+                        <li>
+                          <span class="name-line">Base Rate/Ton:</span>
+                          <span class="price-line">₹2500</span>
+                        </li>
+                        <li>
+                          <span class="name-line">Driver/Day:</span>
+                          <span class="price-line">₹600</span>
+                        </li>
+                        <li>
+                          <span class="name-line">Extras:</span>
+                          <span class="price-line">Fuel,Tolls</span>
+                        </li>
+                      </ul>
+                      <!-- /.feature-list -->
+                      <a href="book-ride.html" class="book-taxi-btn"
+                        >Book Now</a
+                      >
+                    </div>
+                    <!-- /.inner-content -->
+                  </div>
+                  <!-- /.single-taxi-one -->
+                </div>
+                <!-- /.col-lg-4 -->
+                <!-- <div class="col-lg-4 col-md-6 col-sm-12">
+                  <div class="single-taxi-one">
+                    <div class="inner-content">
+                      <img
+                        src="images/pricing/pricing-1-4.png"
+                        alt="Awesome Image"
+                      />
+                      <div class="icon-block">
+                        <i class="conexi-icon-audi"></i>
+                      </div>
+                      <h3>S3 2016 Model</h3>
                       <ul class="feature-list">
                         <li>
                           <span class="name-line">Base Rate:</span>
@@ -955,49 +1226,107 @@
                           <span class="price-line">4</span>
                         </li>
                       </ul>
-                      <!-- /.feature-list -->
                       <a href="single-taxi.html" class="book-taxi-btn"
                         >Book Taxi</a
                       >
                     </div>
-                    <!-- /.inner-content -->
                   </div>
-                  <!-- /.single-taxi-one -->
                 </div>
-                <!-- /.col-lg-4 -->
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                  <div class="single-taxi-one">
+                    <div class="inner-content">
+                      <img
+                        src="images/pricing/pricing-1-5.png"
+                        alt="Awesome Image"
+                      />
+                      <div class="icon-block">
+                        <i class="conexi-icon-chevrolet"></i>
+                      </div>
+                      <h3>Bolt EV 2006 Model</h3>
+                      <ul class="feature-list">
+                        <li>
+                          <span class="name-line">Base Rate:</span>
+                          <span class="price-line">$4.30</span>
+                        </li>
+                        <li>
+                          <span class="name-line">Per Mile/KM:</span>
+                          <span class="price-line">$2.00</span>
+                        </li>
+                        <li>
+                          <span class="name-line">Passengers:</span>
+                          <span class="price-line">4</span>
+                        </li>
+                      </ul>
+                      <a href="single-taxi.html" class="book-taxi-btn"
+                        >Book Taxi</a
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                  <div class="single-taxi-one">
+                    <div class="inner-content">
+                      <img
+                        src="images/pricing/pricing-1-6.png"
+                        alt="Awesome Image"
+                      />
+                      <div class="icon-block">
+                        <i class="conexi-icon-honda"></i>
+                      </div>
+                      <h3>Civic 2014 Model</h3>
+                      <ul class="feature-list">
+                        <li>
+                          <span class="name-line">Base Rate:</span>
+                          <span class="price-line">$4.30</span>
+                        </li>
+                        <li>
+                          <span class="name-line">Per Mile/KM:</span>
+                          <span class="price-line">$2.00</span>
+                        </li>
+                        <li>
+                          <span class="name-line">Passengers:</span>
+                          <span class="price-line">4</span>
+                        </li>
+                      </ul>
+                      <a href="single-taxi.html" class="book-taxi-btn"
+                        >Book Taxi</a
+                      >
+                    </div>
+                  </div>
+                </div> -->
               </div>
               <!-- /.row -->
             </div>
             <div role="tabpanel" class="tab-pane animated fadeInUp" id="suv">
               <div class="row">
-                <div class="col-lg-4">
+                <div class="col-lg-4 col-md-6 col-sm-12">
                   <div class="single-taxi-one">
                     <div class="inner-content">
                       <img
-                        src="images/pricing/pricing-1-1.png"
+                        src="images/pricing/pricing-4-1.png"
                         alt="Awesome Image"
                       />
                       <div class="icon-block">
                         <i class="conexi-icon-bmw"></i>
                       </div>
                       <!-- /.icon-block -->
-                      <h3>M5 2008 Model</h3>
+                      <h3>Suzuki Ertiga</h3>
                       <ul class="feature-list">
                         <li>
-                          <span class="name-line">Base Rate:</span>
-                          <span class="price-line">$4.30</span>
+                          <span class="name-line">Base Rate/10KM:</span>
+                          <span class="price-line">₹240</span>
                         </li>
                         <li>
                           <span class="name-line">Per Mile/KM:</span>
-                          <span class="price-line">$2.00</span>
+                          <span class="price-line">₹20 -₹21.80</span>
                         </li>
                         <li>
-                          <span class="name-line">Passengers:</span>
-                          <span class="price-line">4</span>
+                          <span class="name-line">Driver/Min:</span>
+                          <span class="price-line">₹0.72</span>
                         </li>
                       </ul>
                       <!-- /.feature-list -->
-                      <a href="single-taxi.html" class="book-taxi-btn"
+                      <a href="book-ride.html" class="book-taxi-btn"
                         >Book Taxi</a
                       >
                     </div>
@@ -1006,34 +1335,34 @@
                   <!-- /.single-taxi-one -->
                 </div>
                 <!-- /.col-lg-4 -->
-                <div class="col-lg-4">
+                <div class="col-lg-4 col-md-6 col-sm-12">
                   <div class="single-taxi-one">
                     <div class="inner-content">
                       <img
-                        src="images/pricing/pricing-1-2.png"
+                        src="images/pricing/pricing-4-2.png"
                         alt="Awesome Image"
                       />
                       <div class="icon-block">
                         <i class="conexi-icon-mercedes-benz"></i>
                       </div>
                       <!-- /.icon-block -->
-                      <h3>E Class 2010 Model</h3>
+                      <h3>Suzuki Shift</h3>
                       <ul class="feature-list">
                         <li>
-                          <span class="name-line">Base Rate:</span>
-                          <span class="price-line">$4.30</span>
+                          <span class="name-line">Base Rate/10KM:</span>
+                          <span class="price-line">₹220</span>
                         </li>
                         <li>
                           <span class="name-line">Per Mile/KM:</span>
-                          <span class="price-line">$2.00</span>
+                          <span class="price-line">₹18 -₹21.00</span>
                         </li>
                         <li>
-                          <span class="name-line">Passengers:</span>
-                          <span class="price-line">4</span>
+                          <span class="name-line">Driver/Min:</span>
+                          <span class="price-line">₹0.70</span>
                         </li>
                       </ul>
                       <!-- /.feature-list -->
-                      <a href="single-taxi.html" class="book-taxi-btn"
+                      <a href="book-ride.html" class="book-taxi-btn"
                         >Book Taxi</a
                       >
                     </div>
@@ -1042,35 +1371,35 @@
                   <!-- /.single-taxi-one -->
                 </div>
                 <!-- /.col-lg-4 -->
-                <div class="col-lg-4">
+                <div class="col-lg-4 col-md-6 col-sm-12">
                   <div class="single-taxi-one">
                     <div class="inner-content">
                       <img
-                        src="images/pricing/pricing-1-3.png"
+                        src="images/pricing/pricing-4-3.png"
                         alt="Awesome Image"
                       />
                       <div class="icon-block">
                         <i class="conexi-icon-toyota"></i>
                       </div>
                       <!-- /.icon-block -->
-                      <h3>Yaris 2014 Model</h3>
+                      <h3>Innova Taxi</h3>
                       <ul class="feature-list">
                         <li>
-                          <span class="name-line">Base Rate:</span>
-                          <span class="price-line">$4.30</span>
+                          <span class="name-line">Base Rate/10KM:</span>
+                          <span class="price-line">₹300</span>
                         </li>
                         <li>
                           <span class="name-line">Per Mile/KM:</span>
-                          <span class="price-line">$2.00</span>
+                          <span class="price-line">₹22.30</span>
                         </li>
                         <li>
-                          <span class="name-line">Passengers:</span>
-                          <span class="price-line">4</span>
+                          <span class="name-line">Driver/Min:</span>
+                          <span class="price-line">₹0.80</span>
                         </li>
                       </ul>
                       <!-- /.feature-list -->
-                      <a href="single-taxi.html" class="book-taxi-btn"
-                        >Book Taxi</a
+                      <a href="book-ride.html" class="book-taxi-btn"
+                        >Book Now</a
                       >
                     </div>
                     <!-- /.inner-content -->
@@ -1087,55 +1416,43 @@
         <!-- /.container -->
       </section>
       <!-- /.taxi-style-one -->
-      <hr class="style-one" />
+      <!-- <hr class="style-one" />
       <div class="brand-carousel-wrapper">
         <div class="container">
           <div class="brand-carousel-one owl-theme owl-carousel">
             <div class="item">
               <img src="images/brand/brand-1-1.jpg" alt="Awesome Image" />
             </div>
-            <!-- /.item -->
             <div class="item">
               <img src="images/brand/brand-1-2.jpg" alt="Awesome Image" />
             </div>
-            <!-- /.item -->
             <div class="item">
               <img src="images/brand/brand-1-3.jpg" alt="Awesome Image" />
             </div>
-            <!-- /.item -->
             <div class="item">
               <img src="images/brand/brand-1-4.jpg" alt="Awesome Image" />
             </div>
-            <!-- /.item -->
             <div class="item">
               <img src="images/brand/brand-1-5.jpg" alt="Awesome Image" />
             </div>
-            <!-- /.item -->
             <div class="item">
               <img src="images/brand/brand-1-1.jpg" alt="Awesome Image" />
             </div>
-            <!-- /.item -->
             <div class="item">
               <img src="images/brand/brand-1-2.jpg" alt="Awesome Image" />
             </div>
-            <!-- /.item -->
             <div class="item">
               <img src="images/brand/brand-1-3.jpg" alt="Awesome Image" />
             </div>
-            <!-- /.item -->
             <div class="item">
               <img src="images/brand/brand-1-4.jpg" alt="Awesome Image" />
             </div>
-            <!-- /.item -->
             <div class="item">
               <img src="images/brand/brand-1-5.jpg" alt="Awesome Image" />
             </div>
-            <!-- /.item -->
           </div>
-          <!-- /.brand-carousel-one -->
         </div>
-        <!-- /.container -->
-      </div>
+      </div> -->
       <!-- /.brand-carousel-wrapper -->
       <section class="feature-style-one thm-black-bg">
         <img
@@ -1147,7 +1464,7 @@
           <div class="block-title text-center">
             <div class="dot-line"></div>
             <!-- /.dot-line -->
-            <p>Conexi benefit list</p>
+            <p>GoodDe benefit list</p>
             <h2 class="light">Why choose us</h2>
           </div>
           <!-- /.block-title text-center -->
@@ -1160,9 +1477,10 @@
                 <!-- /.icon-block -->
                 <h3><a href="#">Safety Guarantee</a></h3>
                 <p>
-                  Lorem ipsum dolor sit amet <br />
-                  cons adipisci elit vehicula est <br />
-                  non lac at quam.
+                  GoodDe offers credit booking options to our customers, making
+                  it easy for you to pay for your services over time. This
+                  convenient payment option allows you to enjoy your journey
+                  without worrying about the cost.
                 </p>
                 <a href="#" class="more-link">Read More</a>
               </div>
@@ -1177,9 +1495,10 @@
                 <!-- /.icon-block -->
                 <h3><a href="#">DBS Cleared Drivers</a></h3>
                 <p>
-                  Lorem ipsum dolor sit amet <br />
-                  cons adipisci elit vehicula est <br />
-                  non lac at quam.
+                  We understand the importance of a stress-free journey, and
+                  that's why we offer home pickups. With our home pickup
+                  service, you can sit back and relax while our driver picks you
+                  up and takes you to your destination.
                 </p>
                 <a href="#" class="more-link">Read More</a>
               </div>
@@ -1194,9 +1513,10 @@
                 <!-- /.icon-block -->
                 <h3><a href="#">Free Quotation</a></h3>
                 <p>
-                  Lorem ipsum dolor sit amet <br />
-                  cons adipisci elit vehicula est <br />
-                  non lac at quam.
+                  GoodDe offer a range of vehicles to choose from, ensuring that
+                  you have a comfortable and stress-free journey, no matter how
+                  far you're going. we have the perfect vehicle to suit your
+                  needs.
                 </p>
                 <a href="#" class="more-link">Read More</a>
               </div>
@@ -1209,15 +1529,13 @@
         <!-- /.container -->
       </section>
       <!-- /.feature-style-one -->
-      <section class="taxi-fare-one">
+      <!-- <section class="taxi-fare-one">
         <div class="container">
           <div class="block-title text-center">
             <div class="dot-line"></div>
-            <!-- /.dot-line -->
             <p>Our all taxi rates</p>
             <h2>Check taxi fares</h2>
           </div>
-          <!-- /.block-title -->
           <div class="row">
             <div class="col-lg-6">
               <div class="single-taxi-fare-one thm-base-bg hvr-float-shadow">
@@ -1225,90 +1543,64 @@
                   <div class="icon-block">
                     <i class="conexi-icon-taxi"></i>
                   </div>
-                  <!-- /.icon-block -->
                   <div class="text-block">
                     <h3>All taxi fares</h3>
                     <p>Lorem ipsum dolor sit amet cons adipisci elit.</p>
                   </div>
-                  <!-- /.text-block -->
                 </div>
-                <!-- /.top-block -->
                 <ul class="features-list">
                   <li>
                     <div class="name-line">Initial charge:</div>
-                    <!-- /.name-line -->
                     <div class="price-line">$2.50</div>
-                    <!-- /.price-line -->
                   </li>
                   <li>
                     <div class="name-line">Additional Kilometre:</div>
-                    <!-- /.name-line -->
                     <div class="price-line">$0.50</div>
-                    <!-- /.price-line -->
                   </li>
                   <li>
                     <div class="name-line">
                       Per 2 minutes in stopped traffic:
                     </div>
-                    <!-- /.name-line -->
                     <div class="price-line">$0.66</div>
-                    <!-- /.price-line -->
                   </li>
                 </ul>
-                <!-- /.features-list -->
                 <div class="button-block">
                   <a href="#" class="fare-btn">Order Taxi Now</a>
                 </div>
-                <!-- /.button-block -->
               </div>
-              <!-- /.single-taxi-fare-one -->
             </div>
-            <!-- /.col-lg-6 -->
             <div class="col-lg-6">
               <div class="single-taxi-fare-one thm-base-bg hvr-float-shadow">
                 <div class="top-block">
                   <div class="icon-block">
                     <i class="conexi-icon-taxi"></i>
                   </div>
-                  <!-- /.icon-block -->
                   <div class="text-block">
                     <h3>Additional fares</h3>
                     <p>Lorem ipsum dolor sit amet cons adipisci elit.</p>
                   </div>
-                  <!-- /.text-block -->
                 </div>
-                <!-- /.top-block -->
                 <ul class="features-list">
                   <li>
                     <div class="name-line">One hour of waiting:</div>
-                    <!-- /.name-line -->
                     <div class="price-line">$8.00</div>
-                    <!-- /.price-line -->
                   </li>
                   <li>
                     <div class="name-line">4pm to 8pm weekday surcharge:</div>
-                    <!-- /.name-line -->
                     <div class="price-line">$2.00</div>
-                    <!-- /.price-line -->
                   </li>
                   <li>
                     <div class="name-line">8pm to 6am night surcharge:</div>
-                    <!-- /.name-line -->
                     <div class="price-line">$3.00</div>
-                    <!-- /.price-line -->
                   </li>
                 </ul>
-                <!-- /.features-list -->
                 <div class="button-block">
                   <a href="#" class="fare-btn">Order Taxi Now</a>
                 </div>
-                <!-- /.button-block -->
               </div>
-              <!-- /.single-taxi-fare-one -->
             </div>
-            <!-- /.col-lg-6 -->
           </div>
-          <!-- /.row -->
+        
           <div class="block-text text-center">
             <p>
               There are many variations of passages of lorem ipsum available but
@@ -1316,10 +1608,8 @@
               alteration in some form by injected humour or random words which.
             </p>
           </div>
-          <!-- /.block-text -->
         </div>
-        <!-- /.container -->
-      </section>
+      </section> -->
       <!-- /.taxi-fare-one -->
       <section class="testimonials-style-one">
         <div class="container">
@@ -1412,7 +1702,7 @@
                 <!-- /.image-block -->
                 <div class="text-block">
                   <div class="meta-info">
-                    <a href="#" class="date-block">20 Feb, 2019</a>
+                    <a href="#" class="date-block">20 Jan, 2023</a>
                     <a href="#">by Admin</a>
                     <span class="sep">.</span>
                     <a href="#">3 Comments</a>
@@ -1425,8 +1715,16 @@
                     >
                   </h3>
                   <p>
-                    There are many variations of passages of lorem ipsum
-                    available but the majority have suffered alteration...
+                    When it comes to loading transportation and tourist
+                    bookings, our company provides the best of both worlds. Our
+                    services cater to businesses by offering reliable and
+                    efficient loading transportation options, ensuring that your
+                    cargo arrives at its destination on time. At the same time,
+                    we also offer top-notch tourist booking services with a wide
+                    range of destinations to choose from. With the option to
+                    book your transportation in advance, you can ensure a
+                    hassle-free experience without worrying about any
+                    last-minute problems.
                   </p>
                 </div>
                 <!-- /.text-block -->
@@ -1452,10 +1750,11 @@
                     </div>
                     <!-- /.image-block -->
                     <div class="text-block">
-                      <a href="#" class="date-block">20 Feb, 2019</a>
+                      <a href="#" class="date-block">20 Feb, 2023</a>
                       <h3>
                         <a href="blog-details.html"
-                          >Car with private and discreet cabman for a service</a
+                          >Vehicles with private and discreet cabman for a
+                          service</a
                         >
                       </h3>
                       <div class="meta-info">
@@ -1486,10 +1785,10 @@
                     </div>
                     <!-- /.image-block -->
                     <div class="text-block">
-                      <a href="#" class="date-block">20 Feb, 2019</a>
+                      <a href="#" class="date-block">09 Feb, 2023</a>
                       <h3>
                         <a href="blog-details.html"
-                          >Our taxis commit to make your trips unique</a
+                          >Our Vehicles commit to make your trips unique</a
                         >
                       </h3>
                       <div class="meta-info">
@@ -1519,9 +1818,9 @@
           <p>Call 24 hour service available</p>
           <h3>
             Call now and book <br />
-            our taxi for your next ride
+            our Drivers for your next ride
           </h3>
-          <a href="taxi.html" class="cta-btn">Choose Your Taxi</a>
+          <a href="taxi.html" class="cta-btn">Choose Your Vehicle</a>
         </div>
         <!-- /.container -->
       </section>
@@ -1542,9 +1841,9 @@
                   </div>
                   <!-- /.widget-title -->
                   <p>
-                    There are many vari of pass of lorem ipsum availab but the
-                    majority have suffered in some form by injected humour or
-                    words
+                    GoodDe has a rich history of providing transport and tourist
+                    booking services to customers. Over the years, we have grown
+                    and evolved to become the company we are today
                   </p>
                   <div class="social-block">
                     <a href="#"><i class="fa fa-twitter"></i></a>
@@ -1564,11 +1863,11 @@
                   </div>
                   <!-- /.widget-title -->
                   <ul class="link-lists">
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Get a Taxi</a></li>
-                    <li><a href="#">Our Reviews</a></li>
-                    <li><a href="#">Latest News</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="taxi.html">Choose Vehicle</a></li>
+                    <li><a href="book-ride.html">Book Ride</a></li>
+                    <!-- <li><a href="#">Latest News</a></li> -->
+                    <li><a href="contact.html">Contact</a></li>
                   </ul>
                 </div>
                 <!-- /.footer-widget -->
@@ -1581,11 +1880,11 @@
                   </div>
                   <!-- /.widget-title -->
                   <p>
-                    86 Road Broklyn Street, 600 <br />
-                    New York, USA
+                    Cantonment,Trichirappalli<br />
+                    Tamilnadu, India
                   </p>
                   <ul class="contact-infos">
-                    <li><i class="fa fa-envelope"></i> needhelp@conexi.com</li>
+                    <li><i class="fa fa-envelope"></i> gooddehelp@gmail.com</li>
                     <li><i class="fa fa-phone-square"></i> 666 888 000</li>
                   </ul>
                   <!-- /.contact-infos -->
@@ -1602,7 +1901,7 @@
                   <p>
                     Sign up now for our mailing list to get all latest news
                     <br />
-                    and updates from conexi company.
+                    and updates from GoodDe company.
                   </p>
                   <form action="#" class="subscribe-form">
                     <input
@@ -1629,7 +1928,7 @@
                 <a href="index.html" class="footer-logo"
                   ><img src="images/resources/logo-1-1.png" alt="Awesome Image"
                 /></a>
-                <span>&copy; 2020 <a href="#">Tonatheme.com</a></span>
+                <!-- <span>&copy; 2020 <a href="#">Tonatheme.com</a></span> -->
               </div>
               <!-- /.left-block -->
               <div class="right-block">

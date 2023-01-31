@@ -92,7 +92,7 @@
           <div class="container">
             <div class="left-block">
               <a href="#"><i class="fa fa-user-circle"></i> Customer Sign In</a>
-              <a href="#"><i class="fa fa-envelope"></i> needhelp@conexi.com</a>
+              <a href="#"><i class="fa fa-envelope"></i> gooddehelp@gmail.com</a>
             </div>
             <!-- /.left-block -->
             <div class="logo-block">
@@ -334,6 +334,172 @@
         <!-- /.container -->
       </section>
       <!-- /.team-style-one -->
+
+      <section class="book-ride-one">
+        <img
+          src="images/background/booking-bg-1-1.png"
+          class="footer-bg"
+          alt="Awesome Image"
+        />
+        <h2 id="driver_head" class="text-center">Driver Registration</h2><br>
+        <div class="container">
+              <form action="booking.php"
+              name="add_admin_form"
+              method="post"
+              enctype="multipart/form-data" class="booking-form-one" id="driver-form">
+                <div class="row">
+                  <div class="col-md-4">
+                    <div class="input-holder">
+                      <input type="text" name="name" placeholder="Your name" required/>
+                    </div>
+                    <!-- /.input-holder -->
+                  </div>
+                  <!-- /.col-lg-6 -->
+                  <div class="col-md-4">
+                    <div class="input-holder">
+                      <input
+                        type="text"
+                        name="email"
+                        placeholder="Email address" required
+                      />
+                    </div>
+                    <!-- /.input-holder -->
+                  </div>
+                  <!-- /.col-lg-6 -->
+                  <div class="col-md-4">
+                    <div class="input-holder">
+                      <input
+                        type="number"
+                        name="mobile"
+                        placeholder="Mobile Number" required
+                      />
+                    </div>
+                    <!-- /.input-holder -->
+                  </div>
+                  <div class="col-md-4">
+                    <div class="input-holder">
+                      <input
+                        type="text"
+                        name="dob"
+                        placeholder="Enter your Date of Birth" required
+                      />
+                      <i class="conexi-icon-small-calendar"></i>
+                    </div>
+                    <!-- /.input-holder -->
+                  </div>
+                  <!-- /.col-lg-6 -->
+                  <div class="col-md-4">
+                    <div class="input-holder">
+                      <select class="selectpicker" name="category" required>
+                        <option value="">Select Category</option>
+                        <option value="Agriculture">Agriculture</option>
+                        <option value="Construction">Construction</option>
+                        <option value="Home Appliances">Home Appliances</option>
+                        <option value="Tourist">Tourist</option>
+                        <option value="Others">Others</option>
+                      </select>
+                      <i class="conexi-icon-car"></i>
+                    </div>
+                    <!-- /.input-holder -->
+                  </div>
+                  <div class="col-md-4">
+                    <div class="input-holder">
+                      <select class="selectpicker" name="vehicle_type" required>
+                        <option value="">Your Vehicle Type</option>
+                        <option value="Auto">Auto</option>
+                        <option value="Tourist Bus">Tourist Bus</option>
+                        <option value="Eicher">Eicher</option>
+                        <option value="Mini Truck">Mini Truck</option>
+                        <option value="Lorry">Lorry</option>
+                        <option value="Tempo">Tempo</option>
+                      </select>
+                      <i class="conexi-icon-taxi"></i>
+                    </div>
+                    <!-- /.input-holder -->
+                  </div>
+                  <div class="col-md-4">
+                    <div class="input-holder">
+                      <input
+                        type="text"
+                        name="address"
+                        placeholder="Your address" required
+                      />
+                    </div>
+                    <!-- /.input-holder -->
+                  </div>
+                  <!-- /.col-lg-6 -->
+                  <div class="col-md-4">
+                    <div class="input-holder">
+                      <input
+                        type="number"
+                        name="pincode"
+                        placeholder="Pincode" required
+                      />
+                    </div>
+                    <!-- /.input-holder -->
+                  </div>
+                  <!-- /.col-lg-6 -->
+                  <div class="col-md-4">
+                    <div class="input-holder">
+                      <input
+                        type="text"
+                        name="vehicle_number"
+                        placeholder="Vehicle Number" required
+                      />
+                    </div>
+                    <!-- /.input-holder -->
+                  </div>
+                  <!-- /.col-lg-6 -->
+                  <div class="col-md-4">
+                    <div class="input-holder">
+                       <label for="files" class="label-tag">Profile Image</label>
+                      <input
+                        type="file"
+                        name="profile_image"
+                        placeholder="Profile Image" required
+                      />
+                    </div>
+                    <!-- /.input-holder -->
+                  </div>
+                  <div class="col-md-4">
+                    <div class="input-holder">
+                      <label for="files" class="label-tag">RC Image</label>
+                      <input
+                        type="file"
+                        name="rc_image"
+                        placeholder="Rc Image" required
+                      />
+                    </div>
+                    <!-- /.input-holder -->
+                  </div>
+                  <div class="col-md-4">
+                    <div class="input-holder">
+                      <label for="files" class="label-tag">License Image</label>
+                      <input
+                        type="file"
+                        name="license_image"
+                        placeholder="License Image" required
+                      />
+                    </div>
+                    <!-- /.input-holder -->
+                  </div>
+                  <!-- /.col-lg-6 -->
+                  <div class="col-md-6 text-center">
+                    <div class="input-holder">
+                      <button type="submit" name="btnDriver">Register Now</button>
+                    </div>
+                    <!-- /.input-holder -->
+                  </div>
+                  <!-- /.col-lg-6 -->
+                </div>
+                <!-- /.row -->
+              </form>
+              <!-- /.booking-form-one -->
+          </div>
+          <!-- /.row -->
+        </div>
+        <!-- /.container -->
+      </section>
       <footer class="site-footer no-top-zigzag">
         <img
           src="images/background/footer-bg-1-1.png"
@@ -350,9 +516,9 @@
                   </div>
                   <!-- /.widget-title -->
                   <p>
-                    There are many vari of pass of lorem ipsum availab but the
-                    majority have suffered in some form by injected humour or
-                    words
+                    At GoodDe, we constantly strive to improve our services and
+                    exceed customer expectations. Choose GoodDe for your next
+                    transport or tourist booking and experience the difference.
                   </p>
                   <div class="social-block">
                     <a href="#"><i class="fa fa-twitter"></i></a>
@@ -372,11 +538,10 @@
                   </div>
                   <!-- /.widget-title -->
                   <ul class="link-lists">
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Get a Taxi</a></li>
-                    <li><a href="#">Our Reviews</a></li>
-                    <li><a href="#">Latest News</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="book-ride.html">Book A Ride</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                   </ul>
                 </div>
                 <!-- /.footer-widget -->
@@ -389,11 +554,11 @@
                   </div>
                   <!-- /.widget-title -->
                   <p>
-                    86 Road Broklyn Street, 600 <br />
-                    New York, USA
+                    Cantonment,Trichirappalli<br />
+                    Tamilnadu, India
                   </p>
                   <ul class="contact-infos">
-                    <li><i class="fa fa-envelope"></i> needhelp@conexi.com</li>
+                    <li><i class="fa fa-envelope"></i> gooddehelp@gmail.com</li>
                     <li><i class="fa fa-phone-square"></i> 666 888 000</li>
                   </ul>
                   <!-- /.contact-infos -->
@@ -410,7 +575,7 @@
                   <p>
                     Sign up now for our mailing list to get all latest news
                     <br />
-                    and updates from conexi company.
+                    and updates from GoodDe company.
                   </p>
                   <form action="#" class="subscribe-form">
                     <input
@@ -437,7 +602,7 @@
                 <a href="index.html" class="footer-logo"
                   ><img src="images/resources/logo-1-1.png" alt="Awesome Image"
                 /></a>
-                <span>&copy; 2020 <a href="#">Tonatheme.com</a></span>
+                <!-- <span>&copy; 2020 <a href="#">Tonatheme.com</a></span> -->
               </div>
               <!-- /.left-block -->
               <div class="right-block">
