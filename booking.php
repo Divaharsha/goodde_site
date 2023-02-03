@@ -5,6 +5,8 @@ include_once('includes/custom-functions.php');
 $fn = new custom_functions;
 $db = new Database();
 $db->connect();
+date_default_timezone_set('Asia/Kolkata');
+
 
 ?>
 <?php
@@ -19,12 +21,13 @@ if (isset($_POST['btnAdd'])) {
     $time = $db->escapeString(($_POST['time']));
     $category = $db->escapeString(($_POST['category']));
     $vehicle_type = $db->escapeString(($_POST['vehicle_type']));
+    $booking_date = date('Y-m-d');
     $error = array();
 
    
    if (!empty($name) && !empty($mobile) && !empty($email) && !empty($date) && !empty($pick_address) && !empty($drop_address)  && !empty($time) && !empty($category) && !empty($vehicle_type) ) 
    {
-        $sql_query = "INSERT INTO bookings (name,mobile,email,date,time,pick_address,drop_address,category,vehicle_type,passengers)VALUES('$name','$mobile','$email','$date','$time','$pick_address','$drop_address','$category','$vehicle_type','$passengers')";
+        $sql_query = "INSERT INTO bookings (name,mobile,email,date,time,pick_address,drop_address,category,vehicle_type,passengers,booking_date)VALUES('$name','$mobile','$email','$date','$time','$pick_address','$drop_address','$category','$vehicle_type','$passengers','$booking_date')";
         $db->sql($sql_query);
         $result = $db->getResult();
         if (!empty($result)) {
@@ -54,6 +57,7 @@ if (isset($_POST['btnDriver'])) {
                 $category = $db->escapeString(($_POST['category']));
                 $vehicle_type = $db->escapeString(($_POST['vehicle_type']));
                 $vehicle_number = $db->escapeString($_POST['vehicle_number']);
+                $joined_date = date('Y-m-d');
                 $error = array();
 
               // get Profile image info
@@ -131,7 +135,7 @@ if (isset($_POST['btnDriver'])) {
 
         }
    
-    $sql_query = "INSERT INTO drivers (name,email,mobile,dob,address,pincode,category,vehicle_type,vehicle_number,profile_image,rc_image,license_image) VALUES ('$name','$email','$mobile','$dob','$address','$pincode','$category','$vehicle_type','$vehicle_number','$upload_image','$upload_image1','$upload_image2')";
+    $sql_query = "INSERT INTO drivers (name,email,mobile,dob,address,pincode,category,vehicle_type,vehicle_number,profile_image,rc_image,license_image,joined_date) VALUES ('$name','$email','$mobile','$dob','$address','$pincode','$category','$vehicle_type','$vehicle_number','$upload_image','$upload_image1','$upload_image2','$joined_date')";
     $db->sql($sql_query);
     $result = $db->getResult();
     if (!empty($result)) {
@@ -155,13 +159,13 @@ if (isset($_POST['btnMessage'])) {
     $message = $db->escapeString(($_POST['message']));
     $subject = (isset($_POST['subject']) && !empty($_POST['subject'])) ? $db->escapeString($fn->xss_clean($_POST['subject'])) : "";
     $mobile = (isset($_POST['mobile']) && !empty($_POST['mobile'])) ? $db->escapeString($fn->xss_clean($_POST['mobile'])) : "";
-
+    $date = date('Y-m-d');
     $error = array();
 
    
    if (!empty($name) && !empty($message) && !empty($email)) 
    {
-        $sql_query = "INSERT INTO messages (name,mobile,email,subject,message)VALUES('$name','$mobile','$email','$subject','$message')";
+        $sql_query = "INSERT INTO messages (name,mobile,email,subject,message,date)VALUES('$name','$mobile','$email','$subject','$message','$date')";
         $db->sql($sql_query);
         $result = $db->getResult();
         if (!empty($result)) {
